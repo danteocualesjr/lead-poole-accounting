@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import ServiceCard from '../components/ServiceCard';
 import { Calculator, FileCheck, Shield, Users, Coffee, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Index = () => {
   return (
@@ -26,30 +28,35 @@ const Index = () => {
               description="Individual and business tax preparation services with maximized deductions and credits." 
               icon={FileCheck}
               delay={0.1}
+              backgroundImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
             />
             <ServiceCard 
               title="Small Business Accounting" 
               description="Comprehensive accounting services tailored to the unique needs of your business." 
               icon={Calculator}
               delay={0.2}
+              backgroundImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
             />
             <ServiceCard 
               title="Payroll Services" 
               description="Full-service payroll processing to ensure accuracy and compliance." 
               icon={Users}
               delay={0.3}
+              backgroundImage="https://images.unsplash.com/photo-1586473219010-2ffc57b0d282?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
             />
             <ServiceCard 
               title="Tax Planning" 
               description="Proactive tax planning strategies to minimize your tax liability." 
               icon={Coffee}
               delay={0.4}
+              backgroundImage="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
             />
             <ServiceCard 
               title="IRS Representation" 
               description="Professional representation during IRS audits and other tax matters." 
               icon={Shield}
               delay={0.5}
+              backgroundImage="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
             />
             <div className="glass rounded-xl p-6 flex flex-col justify-center items-center text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <h3 className="text-xl font-semibold text-accounting-blue-dark mb-3">Explore All Services</h3>
@@ -64,7 +71,13 @@ const Index = () => {
       
       {/* Call to Action */}
       <section className="py-20 relative">
-        <div className="absolute inset-0 bg-accounting-blue-dark/90 -z-10"></div>
+        <div className="absolute inset-0 bg-accounting-blue-dark/90 -z-10 overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
+            alt=""
+            className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+          />
+        </div>
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-8">
@@ -92,35 +105,62 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="glass rounded-xl p-8 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Secure Client Portal</h3>
-              <p className="text-accounting-gray mb-6">
-                Access your financial documents securely and communicate with our team.
-              </p>
-              <Link to="/client-portal" className="btn-primary inline-block">
-                Access Portal
-              </Link>
-            </div>
+            <Card className="overflow-hidden animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <AspectRatio ratio={16/9}>
+                <img 
+                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
+                  alt="Client Portal"
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+              <CardContent className="text-center pt-6">
+                <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Secure Client Portal</h3>
+                <p className="text-accounting-gray mb-6">
+                  Access your financial documents securely and communicate with our team.
+                </p>
+                <Link to="/client-portal" className="btn-primary inline-block">
+                  Access Portal
+                </Link>
+              </CardContent>
+            </Card>
             
-            <div className="glass rounded-xl p-8 text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Online Tax Organizer</h3>
-              <p className="text-accounting-gray mb-6">
-                Organize your tax information efficiently to ensure you don't miss any deductions.
-              </p>
-              <Link to="/tax-organizer" className="btn-primary inline-block">
-                Start Now
-              </Link>
-            </div>
+            <Card className="overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <AspectRatio ratio={16/9}>
+                <img 
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
+                  alt="Tax Organizer"
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+              <CardContent className="text-center pt-6">
+                <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Online Tax Organizer</h3>
+                <p className="text-accounting-gray mb-6">
+                  Organize your tax information efficiently to ensure you don't miss any deductions.
+                </p>
+                <Link to="/tax-organizer" className="btn-primary inline-block">
+                  Start Now
+                </Link>
+              </CardContent>
+            </Card>
             
-            <div className="glass rounded-xl p-8 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Newsletter Archive</h3>
-              <p className="text-accounting-gray mb-6">
-                Access our newsletters with valuable tax tips and financial advice.
-              </p>
-              <button className="btn-primary">
-                View Newsletters
-              </button>
-            </div>
+            <Card className="overflow-hidden animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <AspectRatio ratio={16/9}>
+                <img 
+                  src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
+                  alt="Newsletter Archive"
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+              <CardContent className="text-center pt-6">
+                <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Newsletter Archive</h3>
+                <p className="text-accounting-gray mb-6">
+                  Access our newsletters with valuable tax tips and financial advice.
+                </p>
+                <button className="btn-primary">
+                  View Newsletters
+                </button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
