@@ -16,14 +16,14 @@ const TeamCard = ({ name, title, delay = 0, photoUrl }: TeamCardProps) => {
       style={{ animationDelay: `${delay}s` }}
     >
       {photoUrl ? (
-        <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-accounting-blue-light shadow-md">
+        <Avatar className="w-24 h-24 mx-auto mb-4">
           <AvatarImage src={photoUrl} alt={name} className="object-cover" />
           <AvatarFallback className="bg-accounting-gray-light text-2xl font-bold text-accounting-blue-dark">
             {name.split(' ').map(n => n[0]).join('')}
           </AvatarFallback>
         </Avatar>
       ) : (
-        <div className="w-24 h-24 bg-accounting-gray-light rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-accounting-blue-light shadow-md">
+        <div className="w-24 h-24 bg-accounting-gray-light rounded-full mx-auto mb-4 flex items-center justify-center">
           <span className="text-2xl font-bold text-accounting-blue-dark">
             {name.split(' ').map(n => n[0]).join('')}
           </span>

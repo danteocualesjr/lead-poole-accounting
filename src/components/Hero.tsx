@@ -6,14 +6,14 @@ import { FileText, Users, Phone } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="pt-32 pb-20 relative">
-      {/* Background with gradient and improved image visibility */}
+      {/* Background with gradient and subtle image */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <img 
           src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
           alt=""
-          className="w-full h-full object-cover opacity-15"
+          className="w-full h-full object-cover opacity-5"
         />
-        <div className="absolute inset-0 bg-gradient-radial from-accounting-blue-light/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-accounting-blue-light/10 to-transparent"></div>
       </div>
       
       <div className="container-custom">
@@ -40,14 +40,14 @@ const Hero = () => {
               <img 
                 src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
                 alt=""
-                className="w-full h-full object-cover opacity-15"
+                className="w-full h-full object-cover opacity-5"
               />
             </div>
             <h2 className="text-2xl font-semibold text-accounting-blue-dark mb-6">How Can We Help You?</h2>
             
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-accounting-blue-dark/20 p-3 rounded-full">
+                <div className="bg-accounting-blue-dark/10 p-3 rounded-full">
                   <FileText className="text-accounting-blue-dark" size={24} />
                 </div>
                 <div>
@@ -57,7 +57,7 @@ const Hero = () => {
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="bg-accounting-blue-dark/20 p-3 rounded-full">
+                <div className="bg-accounting-blue-dark/10 p-3 rounded-full">
                   <Users className="text-accounting-blue-dark" size={24} />
                 </div>
                 <div>
@@ -67,7 +67,7 @@ const Hero = () => {
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="bg-accounting-blue-dark/20 p-3 rounded-full">
+                <div className="bg-accounting-blue-dark/10 p-3 rounded-full">
                   <Phone className="text-accounting-blue-dark" size={24} />
                 </div>
                 <div>
