@@ -11,9 +11,9 @@ const Hero = () => {
         <img 
           src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
           alt=""
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-5"
         />
-        <div className="absolute inset-0 bg-gradient-radial from-accounting-blue-light/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-accounting-blue-light/10 to-transparent"></div>
       </div>
       
       <div className="container-custom">
@@ -40,7 +40,7 @@ const Hero = () => {
               <img 
                 src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
                 alt=""
-                className="w-full h-full object-cover opacity-25"
+                className="w-full h-full object-cover opacity-5"
               />
             </div>
             <h2 className="text-2xl font-semibold text-accounting-blue-dark mb-6">How Can We Help You?</h2>

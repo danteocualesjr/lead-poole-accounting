@@ -18,7 +18,7 @@ const ServiceCard = ({ title, description, icon: Icon, delay = 0, backgroundImag
       style={{ animationDelay: `${delay}s` }}
     >
       {backgroundImage && (
-        <div className="absolute inset-0 -z-10 opacity-25 group-hover:opacity-35 transition-opacity duration-300">
+        <div className="absolute inset-0 -z-10 opacity-10 group-hover:opacity-15 transition-opacity duration-300">
           <AspectRatio ratio={16/9} className="h-full">
             <img 
               src={backgroundImage} 
