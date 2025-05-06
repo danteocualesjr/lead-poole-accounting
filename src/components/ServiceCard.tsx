@@ -18,7 +18,7 @@ const ServiceCard = ({ title, description, icon: Icon, delay = 0, backgroundImag
       style={{ animationDelay: `${delay}s` }}
     >
       {backgroundImage && (
-        <div className="absolute inset-0 -z-10 opacity-10 group-hover:opacity-15 transition-opacity duration-300">
+        <div className="absolute inset-0 -z-10 opacity-20 group-hover:opacity-25 transition-opacity duration-300">
           <AspectRatio ratio={16/9} className="h-full">
             <img 
               src={backgroundImage} 
@@ -28,7 +28,7 @@ const ServiceCard = ({ title, description, icon: Icon, delay = 0, backgroundImag
           </AspectRatio>
         </div>
       )}
-      <div className="bg-accounting-blue-dark/10 p-4 rounded-full inline-block mb-4 group-hover:bg-accounting-blue-dark/20 transition-colors duration-300">
+      <div className="bg-accounting-blue-dark/20 p-4 rounded-full inline-block mb-4 group-hover:bg-accounting-blue-dark/30 transition-colors duration-300">
         <Icon className="text-accounting-blue-dark" size={24} />
       </div>
       <h3 className="text-xl font-semibold text-accounting-blue-dark mb-3">{title}</h3>
