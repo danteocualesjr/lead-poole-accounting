@@ -1,12 +1,129 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Hero from '../components/Hero';
+import ServiceCard from '../components/ServiceCard';
+import { Calculator, FileCheck, Shield, Users, Coffee, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Hero />
+      
+      {/* Services Section */}
+      <section className="py-20 bg-accounting-gray-light/30">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="section-title">Our Services</h2>
+            <p className="section-subtitle mx-auto">
+              We offer a comprehensive range of accounting and tax services to meet all your financial needs.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ServiceCard 
+              title="Tax Preparation" 
+              description="Individual and business tax preparation services with maximized deductions and credits." 
+              icon={FileCheck}
+              delay={0.1}
+            />
+            <ServiceCard 
+              title="Small Business Accounting" 
+              description="Comprehensive accounting services tailored to the unique needs of your business." 
+              icon={Calculator}
+              delay={0.2}
+            />
+            <ServiceCard 
+              title="Payroll Services" 
+              description="Full-service payroll processing to ensure accuracy and compliance." 
+              icon={Users}
+              delay={0.3}
+            />
+            <ServiceCard 
+              title="Tax Planning" 
+              description="Proactive tax planning strategies to minimize your tax liability." 
+              icon={Coffee}
+              delay={0.4}
+            />
+            <ServiceCard 
+              title="IRS Representation" 
+              description="Professional representation during IRS audits and other tax matters." 
+              icon={Shield}
+              delay={0.5}
+            />
+            <div className="glass rounded-xl p-6 flex flex-col justify-center items-center text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <h3 className="text-xl font-semibold text-accounting-blue-dark mb-3">Explore All Services</h3>
+              <p className="text-accounting-gray mb-4">Discover our full range of business and tax services.</p>
+              <Link to="/services" className="flex items-center text-accounting-blue hover:text-accounting-blue-dark transition-colors">
+                View All Services <ArrowRight size={16} className="ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Call to Action */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-accounting-blue-dark/90 -z-10"></div>
+        <div className="container-custom text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-white/80 max-w-2xl mx-auto mb-8">
+            Contact us today to schedule a consultation and discover how Poole Accounting can help you achieve your financial goals.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/contact" className="bg-white text-accounting-blue-dark px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-200 font-medium">
+              Contact Us
+            </Link>
+            <Link to="/client-portal" className="bg-transparent text-white px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-200 font-medium border border-white/30">
+              Client Portal
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* Client Resources */}
+      <section className="py-20">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="section-title">Client Resources</h2>
+            <p className="section-subtitle mx-auto">
+              Access our secure tools and resources designed to make managing your financial information easier.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="glass rounded-xl p-8 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Secure Client Portal</h3>
+              <p className="text-accounting-gray mb-6">
+                Access your financial documents securely and communicate with our team.
+              </p>
+              <Link to="/client-portal" className="btn-primary inline-block">
+                Access Portal
+              </Link>
+            </div>
+            
+            <div className="glass rounded-xl p-8 text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Online Tax Organizer</h3>
+              <p className="text-accounting-gray mb-6">
+                Organize your tax information efficiently to ensure you don't miss any deductions.
+              </p>
+              <Link to="/tax-organizer" className="btn-primary inline-block">
+                Start Now
+              </Link>
+            </div>
+            
+            <div className="glass rounded-xl p-8 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <h3 className="text-xl font-semibold text-accounting-blue-dark mb-4">Newsletter Archive</h3>
+              <p className="text-accounting-gray mb-6">
+                Access our newsletters with valuable tax tips and financial advice.
+              </p>
+              <button className="btn-primary">
+                View Newsletters
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
